@@ -1,0 +1,194 @@
+:root {
+    --main-color: rgb(103, 196, 199);
+    --hover-color: rgb(103, 196, 199);
+    --text-color: #333;
+    --bg-light: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+}
+
+/* ===== Header Start ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: var(--bg-light);
+    border-bottom: 2px solid var(--main-color);
+    box-shadow: 0 6px 15px rgba(103, 196, 199, 0.3);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--hover-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.icons i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: var(--hover-color);
+}
+/* ===== Header End ===== */
+
+
+/* ===== Hero Start ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 250px 8% 120px;
+    min-height: 500px;
+    background: url("image/bg.png") no-repeat center center/cover;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero-text h1 span {
+    color: var(--main-color);
+}
+
+.hero-text p {
+    font-size: 14px;
+    color: #555;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.hero-text button {
+    padding: 10px 20px;
+    background: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-text button:hover {
+    opacity: 0.9;
+}
+
+.hero-image {
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+/* ===== Hero End ===== */
+
+
+/* ===== Services Start ===== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 60px 8%;
+    background: #fff;
+    text-align: center;
+}
+
+.service-box {
+    background: #fff;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.service-box i {
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.service-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.service-box p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.service-box:hover {
+    background: var(--main-color);
+    color: #fff;
+    transform: translateY(-8px);
+}
+
+.service-box:hover i,
+.service-box:hover h3,
+.service-box:hover p {
+    color: #fff;
+}
+/* ===== Services End ===== */
