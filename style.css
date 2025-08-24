@@ -81,6 +81,7 @@ nav ul li a:hover::after {
 .icons i:hover {
     color: var(--hover-color);
 }
+
 /* ===== Header End ===== */
 
 
@@ -91,7 +92,7 @@ nav ul li a:hover::after {
     justify-content: space-between;
     padding: 250px 8% 120px;
     min-height: 500px;
-    background: url("image/bg.png") no-repeat center center/cover;
+    background: url("image/bg.png") no-repeat left center/cover;
 }
 
 .hero-text {
@@ -138,6 +139,7 @@ nav ul li a:hover::after {
     border-radius: 8px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
 /* ===== Hero End ===== */
 
 
@@ -158,7 +160,7 @@ nav ul li a:hover::after {
     padding: 30px 20px;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .service-box i {
@@ -191,4 +193,89 @@ nav ul li a:hover::after {
 .service-box:hover p {
     color: #fff;
 }
+
 /* ===== Services End ===== */
+
+
+/* ===== Arrival Start ===== */
+.arrival {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.arrival h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.arrivals_con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+}
+
+.arrivals_cards {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.arrivals_cards p {
+    font-size: 16px;
+    color: #000;
+    padding-top: 10px;
+}
+
+.arrivals_cards img {
+    height: 200px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+.arrivals_cards img:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) scale(1.05); /* تكبير بسيط عند الهـوفر */
+}
+.arrivals_cards i {
+    margin: 5px 1px;
+    color: var(--main-color);
+}
+
+.half-star {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    width: 16px;
+}
+
+.half-star .fa-regular {
+    color: var(--main-color);
+}
+
+.half-star .fa-solid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--main-color) 50%, transparent 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.arrivals_cards button {
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+    padding: 6px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.arrivals_cards button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+/* ===== Arrival Ends ===== */
