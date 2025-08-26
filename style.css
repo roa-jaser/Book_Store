@@ -3,7 +3,7 @@
     --hover-color: rgb(21, 173, 179);
     --text-color: #333;
     --bg-light: #fff;
-    --bg-footer:rgb(234 234 234);
+    --bg-footer: rgb(234 234 234);
 }
 
 * {
@@ -15,6 +15,7 @@
 
 body {
     background: var(--bg-light);
+
 }
 
 /* ===== Header Start ===== */
@@ -33,10 +34,28 @@ header {
     z-index: 1000;
 }
 
+.hamburger {
+    display: none;
+}
+
+/* Close icon styling */
+.close-menu {
+    display: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
 .logo {
     font-size: 30px;
     color: var(--main-color);
 }
+
+.logo img {
+    max-height: 30px;
+    width: auto;
+    display: block;
+}
+
 
 nav ul {
     display: flex;
@@ -486,4 +505,206 @@ nav ul li a:hover::after {
 .five-footer button:hover {
     background: var(--hover-color);
 }
+
 /* ===== Footer End ===== */
+
+
+
+
+/* ===== Responsive for iPad Pro (1024px) ===== */
+@media (max-width: 1024px) {
+    .services {
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
+
+    }
+
+    /* --- New Arrival --- */
+    .arrivals_con {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        justify-items: center;
+    }
+
+    .arrivals_con .arrivals_cards:last-child {
+        grid-column: 2;
+    }
+
+    /* --- Our Blog --- */
+    .blog-con {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-items: center;
+    }
+
+    .blog-con .blog-card:last-child {
+        grid-column: 1 / span 2;
+        /* يخليها بالنص وبنفس الحجم */
+        justify-self: center;
+        width: 50%;
+    }
+
+    .footer {
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
+
+    }
+}
+
+
+@media (max-width: 414px) {
+
+    body {
+        overflow-x: hidden;
+        /* منع السكرول الأفقي */
+    }
+
+    /* ===== Navbar ===== */
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 20px;
+        gap: 20px;
+        transition: 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--main-color);
+    }
+
+    .close-menu {
+        display: block;
+        font-size: 28px;
+        color: var(--main-color);
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .icons {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .hamburger {
+        order: 3;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 140px 5% 50px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .hero-text button {
+        margin-bottom: 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 360px;
+        margin: 20px auto 0;
+    }
+
+    /* ===== Services ===== */
+    .services {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    /* ===== Arrival ===== */
+    .arrivals_con {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .arrivals_cards {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    /* ===== Image Blog ===== */
+    .image-blog {
+        height: 100px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-blog button {
+        margin-top: 10px;
+    }
+
+    /* ===== Blog ===== */
+    .blog-con {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .blog-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+        display: grid;
+        grid-template-columns:repeat(2,minmax(100px,1fr));
+        /* عمودين */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .footer>div {
+        width: 100%;
+    }
+
+    .five-footer input {
+        width: 100%;
+        max-width: 180px;
+    }
+}
