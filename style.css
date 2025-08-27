@@ -232,7 +232,7 @@ nav ul li a:hover::after {
 /* العنوان */
 .about .text-about h2 {
     margin-bottom: 1.5rem;
-    font-size: 3rem;
+    font-size: 30px;
     font-family: var(--font-main);
     color: var(--heading-color);
     text-align: left;
@@ -240,7 +240,7 @@ nav ul li a:hover::after {
 
 /* الفقرة */
 .about .text-about p {
-    line-height: 1.6;
+    line-height: 20px;
     max-width: 40rem;
     text-align: justify;
     margin-bottom: 1rem;
@@ -281,7 +281,7 @@ nav ul li a:hover::after {
 #featured-books h2 {
     text-align: center;
     font-family: var(--font-main);
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 40px;
     color: var(--heading-color);
 }
@@ -381,7 +381,7 @@ nav ul li a:hover::after {
 }
 
 .arrival h2 {
-    font-size: 28px;
+    font-size: 30px;
     margin-bottom: 40px;
 }
 
@@ -468,10 +468,10 @@ nav ul li a:hover::after {
 
 .reviews h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     margin-bottom: 40px;
-    color: #333;
+    color: var(--heading-color);
 }
 
 .reviews_box {
@@ -578,7 +578,7 @@ nav ul li a:hover::after {
 }
 
 .blog h2 {
-    font-size: 28px;
+    font-size: 30px;
     margin-bottom: 40px;
 }
 
@@ -1028,7 +1028,10 @@ nav ul li a:hover::after {
     }
 
     .image-blog button {
-        margin-top: 10px;
+        margin-top: -5px;
+        margin-right: 50px;
+        margin-bottom: -30px;
+        font-size: 10px;
     }
 
     /* ===== Blog ===== */
