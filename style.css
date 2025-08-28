@@ -780,13 +780,13 @@ body.dark-mode {
 
     /* --- New Arrival --- */
     .arrivals_con {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        justify-items: center;
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px;
+  justify-items: center;
+}
 
-    .arrivals_con .arrivals_cards:last-child {
+    .arrivals_con > .arrivals_cards:last-child {
         grid-column: 2;
     }
 
@@ -806,10 +806,11 @@ body.dark-mode {
         justify-items: center;
     }
 
-    .blog-con .blog-card:last-child {
+    .blog-con.blog-card:last-child {
         grid-column: 1 / span 2;
         /* يخليها بالنص وبنفس الحجم */
         justify-self: center;
+        justify-content: center;
         width: 50%;
     }
 
@@ -1062,6 +1063,14 @@ body.dark-mode {
         width: 100%;
         max-width: 360px;
     }
+   .blog-con >.blog-card.last-card{
+        width: 100%;
+        max-width: 360px;
+    }
+    .blog-con >.blog-card:last-child {
+   width: 100%;
+   max-width: 360px;
+}
 
     /* ===== Footer ===== */
     .footer {
