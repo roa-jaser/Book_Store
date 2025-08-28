@@ -87,11 +87,14 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+nav ul.active{
+    right: 0;
+}
 /* الوضع الغامق */
 body.dark-mode {
-    --bg-light: #121212;  
-    --bg-footer: #1e1e1e;  
-    --text-color: #f1f1f1; 
+    --bg-light: #121212;
+    --bg-footer: #1e1e1e;
+    --text-color: #f1f1f1;
     --heading-color: #ffffff;
 }
 
@@ -110,9 +113,10 @@ body.dark-mode {
 .icons i:hover {
     color: var(--hover-color);
 }
+
 #colorPicker {
     display: none;
-    }
+}
 
 /* ===== Header End ===== */
 /* ===== Hero Start ===== */
@@ -296,9 +300,11 @@ body.dark-mode {
     margin-bottom: 40px;
     color: var(--heading-color);
 }
-#featured-books  p{
+
+#featured-books p {
     color: var(--text-color);
 }
+
 #featured-books .book_box {
     display: flex;
     gap: 20px;
@@ -689,7 +695,7 @@ body.dark-mode {
 
 .one-footer .logo {
     font-size: 40px;
-    color: var(--main-color);
+    /* color: var(--main-color); */
     margin-bottom: 10px;
 }
 
@@ -780,22 +786,19 @@ body.dark-mode {
 
     /* --- New Arrival --- */
     .arrivals_con {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) !important;
-    gap: 30px;
-  justify-items: center;
-}
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px;
+    }
 
-    .arrivals_con > .arrivals_cards:last-child {
+    .arrivals_con>.arrivals_cards:last-child {
         grid-column: 2;
     }
 
     /* review */
     .reviews_card {
         width: 48%;
-        /* كل صف يحتوي بطاقتين ملتصقتين */
         margin-bottom: 10px;
-        /* مسافة صغيرة بين الصفوف */
     }
 
     /* --- Our Blog --- */
@@ -803,16 +806,18 @@ body.dark-mode {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
-        justify-items: center;
-    }
-
-    .blog-con.blog-card:last-child {
-        grid-column: 1 / span 2;
-        /* يخليها بالنص وبنفس الحجم */
-        justify-self: center;
         justify-content: center;
-        width: 50%;
-    }
+        align-items: center;
+            }
+
+        .blog-card .last-card {
+            width: 60%;
+            max-width: 360px;
+            justify-content: center;
+            align-items: center;
+            padding-right: 1000px;
+    
+        }
 
     .footer {
         grid-template-columns: repeat(5, minmax(150px, 1fr));
@@ -1063,14 +1068,16 @@ body.dark-mode {
         width: 100%;
         max-width: 360px;
     }
-   .blog-con >.blog-card.last-card{
+
+    .blog-con>.blog-card.last-card {
         width: 100%;
         max-width: 360px;
     }
-    .blog-con >.blog-card:last-child {
-   width: 100%;
-   max-width: 360px;
-}
+
+    .blog-con>.blog-card:last-child {
+        width: 100%;
+        max-width: 360px;
+    }
 
     /* ===== Footer ===== */
     .footer {
