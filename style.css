@@ -803,22 +803,16 @@ body.dark-mode {
 
     /* --- Our Blog --- */
     .blog-con {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
         gap: 30px;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-            }
-
-        .blog-card .last-card {
-            width: 60%;
-            max-width: 360px;
-            justify-content: center;
-            align-items: center;
-            padding-right: 1000px;
+        .blog-card  {
+        width: 45%;
     
         }
-
+    }
     .footer {
         grid-template-columns: repeat(5, minmax(150px, 1fr));
 
