@@ -105,6 +105,7 @@ header {
                 color: var(--hover-color);
             }
         }
+        
     }
 
     #colorPicker {
@@ -1056,4 +1057,37 @@ header {
             max-width: 180px;
         }
     }
+}
+/*  Search Box  */
+.search-container {
+    display: inline-block;
+    position: relative;
+}
+
+#search-box {
+    display: none;
+    padding: 6px 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 25px;
+    outline: none;
+    transition: 0.3s ease;
+    font-size: 14px;
+    background: var(--bg-light);
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+#search-box.active {
+    display: inline-block;
+    width: 180px;
+}
+
+.highlight {
+    background-color: lightgreen;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.current-highlight {
+    background-color: yellow !important;
 }
