@@ -682,90 +682,102 @@ body.dark-mode {
     grid-template-columns: repeat(5, minmax(180px, 1fr));
     gap: 40px;
     padding: 50px 80px;
-}
 
-.footer h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
+    h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
 
-.one-footer .logo img{
-    width: 50%;
-    height: auto;
-    margin-bottom: 10px;
-}
+    .one-footer {
+        .logo {
+            img {
+                width: 50%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+        }
 
-.one-footer p {
-    font-size: 14px;
-    line-height: 1.6;
-}
+        p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    }
 
-.two-footer ul {
-    list-style: none;
-    padding: 0;
-}
+    .two-footer {
+        ul {
+            list-style: none;
+            padding: 0;
 
-.two-footer ul li {
-    margin-bottom: 8px;
-}
+            li {
+                margin-bottom: 8px;
 
-.two-footer ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    transition: 0.3s;
-}
+                a {
+                    text-decoration: none;
+                    color: var(--text-color);
+                    transition: 0.3s;
 
-.two-footer ul li a:hover {
-    color: var(--hover-color);
-}
+                    &:hover {
+                        color: var(--hover-color);
+                    }
+                }
+            }
+        }
+    }
 
-.three-footer p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
+    .three-footer {
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
 
-.three-footer i {
-    color: var(--main-color);
-    margin-right: 8px;
-}
+        i {
+            color: var(--main-color);
+            margin-right: 8px;
+        }
+    }
 
-.icons-footer i {
-    font-size: 18px;
-    margin-right: 15px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+    .icons-footer {
+        i {
+            font-size: 18px;
+            margin-right: 15px;
+            cursor: pointer;
+            transition: 0.3s;
 
-.icons-footer i:hover {
-    color: var(--hover-color);
-}
+            &:hover {
+                color: var(--hover-color);
+            }
+        }
+    }
 
-.five-footer input {
-    width: 100%;
-    padding: 8px 10px;
-    background-color: #c2bebe;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    outline: none;
-    margin-bottom: 10px;
-}
+    .five-footer {
+        input {
+            width: 100%;
+            padding: 8px 10px;
+            background-color: #c2bebe;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+            margin-bottom: 10px;
+        }
 
-.five-footer button {
-    background: var(--main-color);
-    color: var(--bg-light);
-    border: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        button {
+            background: var(--main-color);
+            color: var(--bg-light);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
 
-.five-footer button:hover {
-    background: var(--hover-color);
+            &:hover {
+                background: var(--hover-color);
+            }
+        }
+    }
 }
-
 /* ===== Footer End ===== */
+
 
 /* ===== Responsive for iPad Pro (1024px) ===== */
 @media (max-width: 1024px) {
