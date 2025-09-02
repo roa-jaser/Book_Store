@@ -118,6 +118,7 @@ body.dark-mode {
     --text-color: #f1f1f1;
     --heading-color: #ffffff;
 }
+
 /* ===== Header End ===== */
 
 
@@ -176,6 +177,7 @@ body.dark-mode {
         }
     }
 }
+
 /* ===== Hero End ===== */
 
 
@@ -229,6 +231,7 @@ body.dark-mode {
         }
     }
 }
+
 /* ===== Services End ===== */
 
 /* About Section */
@@ -477,6 +480,7 @@ body.dark-mode {
         }
     }
 }
+
 /* ===== Arrival Ends ===== */
 
 /* Reviews Section */
@@ -587,6 +591,7 @@ body.dark-mode {
         }
     }
 }
+
 /* image banner style ends */
 
 
@@ -671,6 +676,7 @@ body.dark-mode {
         }
     }
 }
+
 /* ===== Blog Ends ===== */
 
 
@@ -776,6 +782,7 @@ body.dark-mode {
         }
     }
 }
+
 /* ===== Footer End ===== */
 
 
@@ -798,34 +805,36 @@ body.dark-mode {
         display: grid;
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 30px;
+
+        >.arrivals_cards:last-child {
+            grid-column: 2;
+        }
     }
 
-    .arrivals_con>.arrivals_cards:last-child {
-        grid-column: 2;
-    }
 
     /* review */
     .reviews_card {
         width: 48%;
         margin: 5px;
-        
+
 
     }
 
-    
-/* --- Our Blog --- */
+
+    /* --- Our Blog --- */
     .blog-con {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
         justify-items: center;
+
+        .blog-card:last-child {
+            grid-column: 1 / span 2;
+            justify-self: center;
+            width: 50%;
+        }
     }
 
-    .blog-con .blog-card:last-child {
-        grid-column: 1 / span 2;
-        justify-self: center;
-        width: 50%;
-    }
 
 
     .footer {
@@ -1072,9 +1081,10 @@ body.dark-mode {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-            .blog-card  {
-        width: 90%;
-    
+
+        .blog-card {
+            width: 90%;
+
         }
     }
 
