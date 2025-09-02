@@ -812,18 +812,22 @@ body.dark-mode {
 
     }
 
-    /* --- Our Blog --- */
-    .blog-con {
-        display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-            .blog-card  {
-        width: 45%;
     
-        }
+/* --- Our Blog --- */
+    .blog-con {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-items: center;
     }
+
+    .blog-con .blog-card:last-child {
+        grid-column: 1 / span 2;
+        justify-self: center;
+        width: 50%;
+    }
+
+
     .footer {
         grid-template-columns: repeat(5, minmax(150px, 1fr));
 
