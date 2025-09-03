@@ -273,3 +273,74 @@ function setupSearchLogic(searchIcon, searchBox) {
         }
     }
 }
+
+// Arrival Books Section
+const arrivalsContainer = document.getElementById("arrivalsContainer");
+
+const arrivals = [
+    "arrival_1.jpg",
+    "arrival_2.jpg",
+    "arrival_3.jpg",
+    "arrival_4.jpg",
+    "arrival_5.jpg",
+    "arrival_6.jpg",
+    "arrival_7.jpg",
+    "arrival_8.webp",
+    "arrival_9.jpg",
+    "arrival_10.jpg"
+];
+
+    arrivals.forEach((file, i) => {
+    arrivalsContainer.innerHTML += `
+        <div class="arrivals_cards">
+        <img src="image/${file}" alt="arrival_${i+1}">
+        <p>New Arrivals</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <span class="half-star">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </span>
+        <br>
+        <button>Learn More</button>
+        </div>
+    `;
+    });
+
+    //  Featured Books Section
+    const container = document.getElementById("booksContainer");
+
+    const books = [
+    "book_1.jpg",
+    "book_2.jpg",
+    "book_3.jpg",
+    "book_4.jpg",
+    "book_5.jpg",
+    "book_6.jpg",
+    "book_7.png",
+    "book_8.png",
+    "book_9.jpg",
+    "book_10.png",
+    "book_11.jpg",
+    "book_12.png",
+    "book_13.png",
+    "book_14.png",
+    "book_15.png",
+    ];
+
+    books.forEach((file, i) => {
+    container.innerHTML += `
+        <div class="bok_card" id="book-${i + 1}">
+        <div class="book_img"><img src="image/${file}" alt="Book ${i + 1}"></div>
+        <div class="book_tag">
+            <h2>Featured Book</h2>
+            <p class="write">John Deo</p>
+            <div class="type">Thriller, Horror, Romance</div>
+            <p class="price">25.50$ <sub><del>$28.06</del></sub></p>
+            <a href="#" class="b_btn">Learn More</a>
+        </div>
+        </div>
+    `;
+    });
